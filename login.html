@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/image/icon.png" />
+  <title> Appet - Entrar </title>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="assets/js/rotas.js"></script>
+    <script type="text/javascript" src="assets/js/util.js"></script>
+  <script type="text/javascript" src="assets/js/login.js"></script>
+  <script type="text/javascript" src="assets/js/usuario.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/ajustes.css" type="text/css">
+
+</head>
+
+<body class="bg-light" style="">
+
+
+  <div class="py-5 bg-light"
+    style="background-image: url(assets/image/cat.jpg);  background-size: cover; background-position: to left botto; background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="p-5 col-md-6 d-flex flex-column justify-content-center" style="color: white;">
+          <h1 style="font-weight: bolder; text-shadow: 2px 2px 3px #FF0000;">Verdadeiro Amor...</h1> <br>
+          <p class="mb-4 lead" style="font-weight: bold;text-shadow: 2px 2px 3px #FF0000;">"Se quiser aprender a amar,
+            comece com os animais... eles são mais sensíveis." <h6>(George Gurdjieff)</h6>
+          </p>
+        </div>
+        <div class="p-5 col-md-6 bg-dark text-light" style="">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-8" style=""></div>
+                <div id="refentrar" class="col-md-4" style=""><a class="btn btn-outline-secondary text-right"
+                    href="novo-usuario.html">Cadastrar</a></div>
+              </div>
+            </div>
+          </div>
+          <h1 class="mb-3" contenteditable="true">Login<br></h1>
+
+          <div class="form-group"> <label>E-mail<br></label> <input id="email" class="form-control"
+              placeholder="email@domino.com" type="email" required="required" name="email"> </div>
+          <div class="row">
+          </div>
+          <div class="form-group mb-0 pb-0"><label>Senha<br></label> <input id="senha" type="password"
+              class="form-control" placeholder="******" required="required" name="senha"> </div><a
+            class="btn btn-link ml-0 mt-0 pl-0" href="#" style="">Esqueci minha senha<br></a>
+          <button id="login" type="submit" class="btn btn-block btn-outline-light p-2 pt-0 mt-2">Entrar<br></button>
+          <a class="btn text-left w-100 py-2 btn-dark border mt-4" href="#"><u><i
+                class="fa fa-fw fa-google">&nbsp;</i>Entrar com o Google</u><br></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- start header -->
+  <div id="header"></div>
+  <!-- end header -->
+  <!--  Rodape -->
+  <div id="footer"></div>
+  <!--  Rodape -->
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $('#login').click(function () {
+
+        $('#login').prop('disabled', true);
+
+        var data_request = {
+          emailUser: $("#email").val(),
+          senha: $("#senha").val(),
+        };
+
+        Usuario.efetuarLogin(data_request);
+        setTimeout(function () { $('#login').prop('disabled', false); }, 2000);
+      });
+
+    });
+  </script>
+</body>
+
+</html>

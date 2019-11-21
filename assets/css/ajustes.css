@@ -1,0 +1,147 @@
+/*
+
+Ajuste do Menu, Box-Notificação, msg-Notificação, Body
+
+*/
+
+#box-notificacao {
+position: fixed;
+top:0px;
+display:none;
+min-width: 100%;
+border-radius: 0px;
+opacity: 0.95;
+filter: alpha(opacity=95);
+}
+
+#msg-notificacao{
+margin-left: 5px;
+padding: 3px;
+font-weight: bold;
+}
+
+#menu-principal{
+position: fixed;
+top:0px;
+min-width: 100%; 
+
+}
+
+.menu-principal-transparente {
+opacity: 0.3;
+filter: alpha(opacity=30);
+transition: 0.4s;
+}
+
+.menu-principal-transparente:hover {
+opacity: 1
+}
+
+
+body{
+margin-top: 100px;
+}
+
+#topo{
+padding: 10px;
+bottom: 0px;
+position: fixed;
+right: 0px;
+cursor: pointer;
+
+}
+
+.topo-visivel{
+opacity: 0.1;
+filter: alpha(opacity=10);
+}
+
+
+
+#botaoEditar{
+float: right;
+margin-top: -10px;
+text-decoration: none;
+}
+
+#botaoEditarServico{
+float: right;
+margin-top: 0px;
+text-decoration: none;
+}
+
+input[type=text]:disabled {
+  background: white;
+    border: none;
+}
+
+
+.ocultar{
+
+opacity: 0.4;
+filter: alpha(opacity=40);
+transition: 0.4s;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.table-all{
+border-collapse:collapse;
+border-spacing:0;
+width:100%;
+display:table
+}
+
+.table-all{
+border:1px solid #ccc		
+}
+.table-all tr{
+border-bottom:1px solid #ddd
+}
+.table-all tr:nth-child(odd){
+background-color:#fff
+}
+.table-all tr:nth-child(even){
+background-color:#f1f1f1
+}
+.table-all td,.table-all th{
+padding:8px 8px;
+display:table-cell;
+text-align:center;
+vertical-align:top
+}
+.table-all th:first-child,.table-all td:first-child{
+padding-left:16px
+}
+
+
+.display-block{
+
+	display: block;
+}
+
+.display-none{
+		
+	display: none;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/image/icon.png" />
+  <title> Appet - Periodo</title>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="assets/js/rotas.js"></script>
+  <script type="text/javascript" src="assets/js/util.js"></script>
+  <script type="text/javascript" src="assets/js/login.js"></script>
+  <script type="text/javascript" src="assets/js/usuario.js"></script>
+  <script type="text/javascript" src="assets/js/periodoatividade.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/ajustes.css" type="text/css">
+
+</head>
+
+<body class="bg-light" style="">
+  <div class="pt-5" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="" contenteditable="true"><b>Periodos de Atividade</b><br></h4>
+          <button class="btn mt-2 text-dark btn-secondary" id="salvar">Salvar</button>
+          <a class="btn mt-2 text-dark btn-secondary" style="margin-left: 10px;" href="meu-perfil.html" id="voltar">
+            Voltar</a>
+
+          <br><br>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+
+          <input id="id" type="text" style="display: none">
+
+          <input id="idPeriodo" type="text" style="display: none;">
+
+          <div class="form-group"><label>Data Inicial</label>
+            <input class="form-control border-0 my-2" type="Date" name="DataInicio" id="dataInicial">
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <div class="form-group"><label>Data Final</label>
+
+            <input class="form-control border-0 my-2" type="Date" name="DataFim" id="dataFinal">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="py-2" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><label for="form16" class="mt-0"><br></label></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="my-3">
+            <div style="text-align: center;">
+              <font color="#212529"><span style="font-size: 21px; white-space: nowrap;"><b>PERIODO DE
+                    ATIVIDADE</b></span></font>
+            </div>
+          </h3>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table style="max-width: 500px; margin: auto; text-align: center;" id="tabelaPeriodo"
+      class="table table-bordered table-all">
+      <thead class="thead-dark">
+        <th style="min-width: 100px; max-width: 100px;" class="text-center">Data Inicial</th>
+        <th style="min-width: 100px; max-width: 100px;" class="text-center">Data Final</th>
+        <th style="min-width: 100px; max-width: 100px;" class="text-center">Ação</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- start header -->
+  <div id="header"></div>
+  <!-- end header -->
+  <!--  Rodape -->
+  <div id="footer"></div>
+  <!--  Rodape -->
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+
+      Usuario.pegaUsuarioCurrent();
+
+      setTimeout(function(){pegaListaPeriodoAtividade();}, 2000);
+
+      
+
+      $('#salvar').click(function () {
+        $('#salvar').prop('disabled', true);
+        adicionarPeriodoAtividade();
+        setTimeout(function () { $('#salvar').prop('disabled', false); }, 2000);
+      });
+
+    });
+
+  </script>>
+</body>
+
+</html>

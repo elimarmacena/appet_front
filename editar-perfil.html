@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/image/icon.png" />
+  <title> Appet - Editar Perfil </title>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="assets/js/rotas.js"></script>
+    <script type="text/javascript" src="assets/js/util.js"></script>
+  <script type="text/javascript" src="assets/js/login.js"></script>
+  <script type="text/javascript" src="assets/js/usuario.js"></script>
+  <script type="text/javascript" src="assets/js/endereco.js"></script>
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/ajustes.css" type="text/css">
+</head>
+
+<body class="bg-light" style="">
+
+
+  <div class="pt-5" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="m-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class=""><b>Editar Perfil</b><br></h4><br>
+
+          
+          <button id="salvar"  class="btn mt-2 text-dark btn-secondary">Salvar</button>
+          <a href="meu-perfil.html" class="btn mt-2 text-dark btn-secondary" style="margin-left: 3px;">Voltar</a>
+
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><label for="form16" class="mt-0">Foto de Perfil<br></label></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><img class="img-fluid d-block rounded-circle my-2 m-2"
+            src="assets/image/icone_padrao.png" width="100">
+          <div class="form-group"><input type="file" class="form-control-file w-100" id="form16" placeholder=""></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="">
+          <div class="form-group" id="formulario">
+
+
+            <input id="id" type="text" style="display: none;">
+
+
+            <input id="email" type="text" style="display: none;"><br>
+
+
+            <label for="nome" class="mt-3">Nome<br> </label><input id="nome" type="text" class="form-control"
+              placeholder="Nome">
+            <div class="form-group">
+              <div class="form-group"><label for="senha" class="mt-2">Senha<br></label><input id="senha" type="password"
+                  class="form-control" placeholder="*****">
+
+                <span id="versenha" class="btn btn-light"
+                  style="margin-top: 10px; font-size: 14px; text-decoration: none; cursor: pointer; padding-top: 4px; padding-bottom: 5px; padding-top: 5px; padding-right: 15px;">Mostrar
+                  Senha</span>
+
+              </div>
+            </div>
+            <div class="form-group"><label for="sobre" class="mt-2">Sobre<br></label>
+              <div class="form-group"><textarea id="sobre" class="form-control" rows="3"
+                  placeholder="Descrição sobre você."></textarea></div>
+              <div class="form-group"><label class="mt-2">Contato</label>
+                <div class="form-group">
+                  <select class="form-control border-0" id="tipo">
+                    <option>Telefone Celular</option>
+                    <option>Telefone Fixo</option>
+                    <option>E-mail</option>
+                  </select>
+                </div>
+                <input type="text" class="form-control mb-2" id="contato" placeholder="Digite aqui...">
+                <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>&nbsp;Adicionar outro Contato&nbsp;</a>
+                <div class="form-group" style=""><label></label></div>
+              </div>
+              <div class="form-group"><label class="mt-2">Endereço<br>
+
+                <input id="idEndreco" type="text" style="display: none;">
+
+              </label><input type="text"
+                  class="form-control mb-2" id="cep" placeholder="CEP" required="required">
+                <div class="form-group"><input type="text" class="form-control mb-2" id="bairro" placeholder="Bairro"
+                    required="required">
+                  <div class="form-group"><input type="text" class="form-control mb-2" id="cidade" placeholder="Cidade"
+                      required="required">
+                    <div class="form-group"><input type="text" class="form-control mb-2" id="estado"
+                        placeholder="Estado" required="required">
+                      <div class="form-group"><input type="text" class="form-control" id="numero" placeholder="Numero"
+                          required="required"></div>
+                    </div>
+                  </div>
+                </div><a class="btn btn-light" href="#" id="adicionaEndereco"><i class="fa fa-plus"></i>&nbsp;Adicionar outro Endereço</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center py-2">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- start header -->
+  <div id="header"></div>
+  <!-- end header -->
+  <!--  Rodape -->
+  <div id="footer"></div>
+  <!--  Rodape -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      // Preencher dados do usuario
+      Usuario.pegaUsuarioCurrent();
+
+      setTimeout(function(){ pegaEndereco();}, 2000);
+      
+
+      // Botao salvar
+
+      $("#salvar").click(function () {
+
+        Usuario.atualizaUsuario();
+
+        if ( $("#idEndreco").val() == "") {
+          
+            adicionaEndereco();
+        }else{
+           atualizaEndereco();
+        }
+
+      
+        
+
+      });
+
+     //  $('#salvaEndereco').click( function (){ 
+         
+     // });
+
+      // Botao ver senha
+      $("#versenha").click(function () {
+
+        var inputSenha = $('#senha');
+        if (inputSenha.attr('type') == "password") {
+          $('#senha').attr('type', 'text');
+          $(this).text('Ocultar senha');
+        } else {
+          $('#senha').attr('type', 'password');
+          $(this).text('Mostrar senha');
+
+        }
+
+      });
+
+    });
+  </script>
+</body>
+
+</html>
