@@ -99,12 +99,12 @@
         g_id: profile.getId()
 
       };
-      $.get(rota_user, { g_id: data_request.getId }, () => {
+      $.get(rota_user, { g_id: profile.getId() }, () => {
 
       }).done((userResponse) => {
         jsonResponse = JSON.parse(userResponse).data;
         if (jsonResponse.length == 0) {
-          $.post(rota_user, data_request, () => {
+          $.post(rota_googleuser, data_request, () => {
 
           }).done((createResult) => {
             var result = JSON.parse(createResult);
@@ -123,6 +123,13 @@
               mensagem("Usuário ou senha incorretos.", "Erro", 5000);
             }
           })
+        }
+        else{
+          var login_request = {
+            emailUser: jsonResponse[0].email,
+            senha: jsonResponse[0].google_id.slice(0,5)
+          }
+          Usuario.efetuarLogin(login_request);
         }
       })
     };

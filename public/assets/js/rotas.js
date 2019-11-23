@@ -2,6 +2,7 @@
 //const rota_raiz = 'https://appet-back.herokuapp.com';
 const rota_raiz = "http://127.0.0.1:5001";
 const rota_user = rota_raiz+"/user";
+const rota_googleuser = rota_raiz+"/guser";
 const rota_current_user = rota_raiz+"/currentUser";
 const rota_periodo_atividade = rota_raiz+"/AtivityTime";
 const rota_horario_Servico = rota_raiz+"/ServiceSchedule";
