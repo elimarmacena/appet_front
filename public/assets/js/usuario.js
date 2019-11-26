@@ -141,10 +141,17 @@ class Usuario {
 
 				var token =  result['token']
 				$.cookie('token', token)
-
-				setTimeout(function () {
-					window.location = './meu-perfil.html';
-				}, 2000);
+				if(result.admin == 1){
+					setTimeout(function () {
+						window.location = './admin-home.html';
+					}, 2000);
+				}
+				else{
+					setTimeout(function () {
+						window.location = './meu-perfil.html';
+					}, 2000);
+				}
+				
 			}
 			else {
 				mensagem("Usuário ou senha incorretos.", "Erro", 5000);
@@ -158,37 +165,3 @@ class Usuario {
 	}
 
 }
-
-// function getUsuario (){
-
-// 	var data_request = {
-// 		userId:$("#id").val(),
-// 		nomeUser:$("#nome").val(),
-// 		emailUser:$("#email").val(),
-// 		senha:$("#senha").val(),
-// 		sobre:$("#sobre").val()
-// 	};
-
-// 	$.get(url_request, data_request,function(result){
-
-// 		alert(result);
-
-// 	}
-// }
-
-
-
-
-// 	var data_request = {
-// 		userId:vid, nomeUser:vnome, emailUser:vemail, senha:vsenha, sobre:vsobre
-// 	};
-
-// 	$.get(url_request,data_request,function(result){
-// 			alert(result);
-// 	})
-
-// 	// $.getJSON(url_request, data_request, function(result){
-// 	// 	console.log(result);
-// 	//  });
-
-// })

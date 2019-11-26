@@ -73,11 +73,11 @@
               <div class="form-group"><textarea class="form-control" id="descricao" rows="3" placeholder="Descrição do serviço"></textarea>
                 <div class="form-group"><label class="mt-2" contenteditable="true">Valor do Serviço (R$)<br></label><input type="text" class="form-control" id="valor" required="required" placeholder="20.00"></div>
               
-              </div> Quando o Serviço será ofertado? <br><br>
+              </div> <br><br>
                 
                 <div> <label>Periodo de Atividade</label>
                     <select class="form-control border-0" id="periodoatividade" >  <!-- onchange="atualizarTabelaHorario()" -->
-                               <option value="">Periodo &#60;inicio&#62;   &#60;final&#62; </option>
+                               <option value="-1">Periodo &#60;inicio&#62;   &#60;final&#62; </option>
                     </select> 
 
                     <br><br>
@@ -178,55 +178,17 @@
         
 
     });
-
-
-
-
-  //     var jsonArray = [
-  //   { "user": { "id": 100, "screen_name": "d_linq" }, "text": "to objects" },
-  //   { "user": { "id": 130, "screen_name": "c_bill" }, "text": "g" },
-  //   { "user": { "id": 155, "screen_name": "b_mskk" }, "text": "kabushiki kaisha" },
-  //   { "user": { "id": 301, "screen_name": "a_xbox" }, "text": "halo reach" }]
-  // // ["b_mskk:kabushiki kaisha", "c_bill:g", "d_linq:to objects"]
-  // var queryResult = Enumerable.From(jsonArray)
-  //     .Where(function (x) { return x.user.id < 155 })
-  //     .OrderBy(function (x) { return x.user.id })
-  //     .Select()
-  //     .ToArray();
-
-  //   console.log(JSON.stringify(queryResult));
-
-  
 	});
 
 	</script>
 
 
-  <!-- Menu -->
-  <nav id="menu-principal" class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="container"> <a class="navbar-brand" href="index.html">
-        <img class="img-fluid d-block" src="assets/image/
-logo.png" style="" width="100" height="100"><b></b>
-      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar10">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"> <a class="nav-link" href="buscar-servico.html">Serviços</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="meu-perfil.html">Meu Perfil</a> </li>
-        </ul> <a href="login.html" class="btn navbar-btn ml-md-2 btn-light text-dark">Entrar</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Notificação -->
-  <div class="alert" id="box-notificacao">
-    <i class="fa fa-info" > </i>
-    <span id="msg-notificacao"> </span>
-  </div> 
-
-  <!--  ir ao topo -->
-  <span id="topo" onclick="paraTopo()" class="topo-visivel"> <i style="font-size: 20px;" class="fa fa-arrow-up"></i> Topo</span>
+  <!-- start header -->
+  <div id="header"></div>
+  <!-- end header -->
+  <!--  Rodape -->
+  <div id="footer"></div>
+  <!--  Rodape -->
 
 </body>
 
