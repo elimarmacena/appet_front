@@ -50,10 +50,7 @@ $(function () {
 function logout(){
 
     $.removeCookie("token");
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
+    window.open('./logoutgoogle.html');
     setTimeout( function () { window.location = './index.html'; }, 500);
 
     

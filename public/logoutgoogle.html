@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-signin-client_id"
+        content="395714837629-f1hj6ll2g5e5hc86s8jphsuj11fhi9mm.apps.googleusercontent.com">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <script>
+            function onLoad() {
+                gapi.load('auth2', function () {
+                    gapi.auth2.init().then(() => {
+                        var auth2 = gapi.auth2.getAuthInstance();
+                        auth2.signOut().then(function () {
+                            console.log('User signed out.');
+                            self.close();
+                        });
+                    });
+                });
+            }
+        </script>
+        <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    </body>
+
+</html>
